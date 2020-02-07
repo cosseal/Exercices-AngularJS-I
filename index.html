@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/5c87734899.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="angular.min.js"></script>
+    <script src="angular-route.js"></script>
+    <title>Angular js</title>
+
+
+</head>
+<body>
+
+
+
+
+<div data-ng-app="monAppli">
+
+    <div>
+        <a href="#!">Home</a>
+        <a href="#!films">Films</a>
+        <a href="#!livres">livres</a>
+        <a href="#!jeuxvideo">jeux Video</a>
+    </div>
+
+    <div class="ng-view">
+           <p>Login:<input type="text" data-ng-model="login"></p>
+           <p>Mot de passe:<input type="password" data-ng-model="mdp"></p>
+           <span> {{login}} {{mdp}}</span><br>
+
+
+            <ol>
+                <li data-ng-repeat="film in films">{{film}}</li>
+            </ol>
+
+            <input type="text" name="ajoutFilm" data-ng-model="ajoutFilm">
+            <button data-ng-click="ajouterFilm()">Ajouter un film</button>
+
+
+    </div>
+</div>
+<!--   <p data-ng-bind="name"></p>-->
+
+
+
+<!--    valeurs identiques entre model et bind si on veut les lier
+si on met mon appli dans la valeur  app cela devient un module que l'on peut utiliser en js
+-->
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

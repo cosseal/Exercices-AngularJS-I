@@ -1,0 +1,11 @@
+<p>Nom:<input type="text" data-ng-model="name"></p>
+<p>Nom de famille:<input type="text" data-ng-model="lastname"></p>
+<span>Votre nom est : {{name}} {{lastname}}</span>
+
+
+<ol>
+    <li data-ng-repeat="film in films">{{film}}</li>
+</ol>
+
+<input type="text" name="ajoutFilm" data-ng-model="ajoutFilm">
+<button data-ng-click="ajouterFilm()">Ajouter un film</button>
